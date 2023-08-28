@@ -1,14 +1,15 @@
-name: main
+name: CI
 
-on: [push, pull request]
+on: [push, pull_request]
 
-jobs: 
+jobs:
   build:
 
     runs-on: ubuntu-latest
     strategy:
       matrix:
         python: ["3.7", "3.8", "3.9", "3.10"]
+
     steps:
       - uses: actions/checkout@v2
       - name: Setup Python

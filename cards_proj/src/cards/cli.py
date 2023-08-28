@@ -13,7 +13,6 @@ import typer
 
 app = typer.Typer(add_completion=False)
 
-
 @app.command()
 def version():
     """Return version of cards application"""

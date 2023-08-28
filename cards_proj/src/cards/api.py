@@ -4,6 +4,8 @@ API for the cards project
 from dataclasses import asdict
 from dataclasses import dataclass
 from dataclasses import field
+from typing import List
+import cards
 
 from .db import DB
 
@@ -26,6 +28,7 @@ class Card:
     @classmethod
     def from_dict(cls, d):
         return Card(**d)
+
     def to_dict(self):
         return asdict(self)
 
